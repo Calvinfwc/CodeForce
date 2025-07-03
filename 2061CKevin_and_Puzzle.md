@@ -7,16 +7,16 @@ given that classmate $i$ is honest (similarly lier). Notice any configuration in
 Therefore, $|S_{i,h}|$ is exactly how many different configuration can $s$ take (think of it as a varaible) so that $sh$ remains in $S_{i,h}$.
 If $a_{i-1} = a_i$ then $s$ can be $any$ configuration in $S_{i-1,h}$ (1). On the other hand, if $s$ can be $some$ configuration in $S_{i-1,h}$, then  $a_{i-1} = a_i$ (2).
 Similarly,
-if $a_{i-2} = a_i + 1$ then $s$ can be any configuration in $S_{i-1,l}$ (3). 
-On the other hand, if $s$ can be $some$ configuration in $S_{i-1,l}$, then  $a_{i-2} = a_i + 1$ (4).
+if $a_{i-2} + 1 = a_i$ then $s$ can be any configuration in $S_{i-1,l}$ (3). 
+On the other hand, if $s$ can be $some$ configuration in $S_{i-1,l}$, then  $a_{i-2} + 1 = a_i$ (4).
 
 To compute $|S_{i,h}|$, we have the following case :
 
 - only $a_{i-1} = a_i$ holds, then $|S_{i,h}| = |S_{i-1,h}|$ (by 1, 4)
 
-- only $a_{i-2} = a_i + 1$ holds, then $|S_{i,h}| = |S_{i-1,l}|$ (by 2, 3)
+- only $a_{i-2} + 1 = a_i$ holds, then $|S_{i,h}| = |S_{i-1,l}|$ (by 2, 3)
 
-- both $a_{i-1} = a_i$ and $a_{i-2} = a_i + 1$ hold, as $S_{i-1,h}$ and $S_{i-1,l}$ are disjoint, we have $|S_{i,h}| = |S_{i-1,h}| + |S_{i,l}|$ (by 1,3)
+- both $a_{i-1} = a_i$ and $a_{i-2} + 1 = a_i$ hold, as $S_{i-1,h}$ and $S_{i-1,l}$ are disjoint, we have $|S_{i,h}| = |S_{i-1,h}| + |S_{i,l}|$ (by 1,3)
 
 - none holds, then $S_{i,h} = 0$ (by 2,4)
 
